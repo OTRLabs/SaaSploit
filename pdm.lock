@@ -5,10 +5,24 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:19cce0af3eef35956ca52cb4ebe7f00b613477f54e812eb373fa042cf66c74a6"
+content_hash = "sha256:35ac5f97c5924bda356a99f8fad650bbf9606c6168c21ddd3b568b6907d7b957"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
+
+[[package]]
+name = "linkify-it-py"
+version = "2.0.3"
+requires_python = ">=3.7"
+summary = "Links recognition library with FULL unicode support."
+groups = ["default"]
+dependencies = [
+    "uc-micro-py",
+]
+files = [
+    {file = "linkify-it-py-2.0.3.tar.gz", hash = "sha256:68cda27e162e9215c17d786649d1da0021a451bdc436ef9e0fa0ba5234b9b048"},
+    {file = "linkify_it_py-2.0.3-py3-none-any.whl", hash = "sha256:6bcbc417b0ac14323382aef5c5192c0075bf8a9d6b41820a2b66371eac6b6d79"},
+]
 
 [[package]]
 name = "markdown-it-py"
@@ -22,6 +36,37 @@ dependencies = [
 files = [
     {file = "markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"},
     {file = "markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1"},
+]
+
+[[package]]
+name = "markdown-it-py"
+version = "3.0.0"
+extras = ["linkify", "plugins"]
+requires_python = ">=3.8"
+summary = "Python port of markdown-it. Markdown parsing, done right!"
+groups = ["default"]
+dependencies = [
+    "linkify-it-py<3,>=1",
+    "markdown-it-py==3.0.0",
+    "mdit-py-plugins",
+]
+files = [
+    {file = "markdown-it-py-3.0.0.tar.gz", hash = "sha256:e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"},
+    {file = "markdown_it_py-3.0.0-py3-none-any.whl", hash = "sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1"},
+]
+
+[[package]]
+name = "mdit-py-plugins"
+version = "0.4.1"
+requires_python = ">=3.8"
+summary = "Collection of plugins for markdown-it-py"
+groups = ["default"]
+dependencies = [
+    "markdown-it-py<4.0.0,>=1.0.0",
+]
+files = [
+    {file = "mdit_py_plugins-0.4.1-py3-none-any.whl", hash = "sha256:1020dfe4e6bfc2c79fb49ae4e3f5b297f5ccd20f010187acc52af2921e27dc6a"},
+    {file = "mdit_py_plugins-0.4.1.tar.gz", hash = "sha256:834b8ac23d1cd60cec703646ffd22ae97b7955a6d596eb1d304be1e251ae499c"},
 ]
 
 [[package]]
@@ -71,4 +116,42 @@ dependencies = [
 files = [
     {file = "rich-13.7.1-py3-none-any.whl", hash = "sha256:4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222"},
     {file = "rich-13.7.1.tar.gz", hash = "sha256:9be308cb1fe2f1f57d67ce99e95af38a1e2bc71ad9813b0e247cf7ffbcc3a432"},
+]
+
+[[package]]
+name = "textual"
+version = "0.75.1"
+requires_python = "<4.0.0,>=3.8.1"
+summary = "Modern Text User Interface framework"
+groups = ["default"]
+dependencies = [
+    "markdown-it-py[linkify,plugins]>=2.1.0",
+    "rich>=13.3.3",
+    "typing-extensions<5.0.0,>=4.4.0",
+]
+files = [
+    {file = "textual-0.75.1-py3-none-any.whl", hash = "sha256:7edb1196753feae79890daa2287bc3180ebba2cbf63f59f2a160991325b020f2"},
+    {file = "textual-0.75.1.tar.gz", hash = "sha256:3f0b53fe6119aa64853c7e60ced4d4e16fb23c83dee1e0fd19eddb3f2639c02e"},
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+requires_python = ">=3.8"
+summary = "Backported and Experimental Type Hints for Python 3.8+"
+groups = ["default"]
+files = [
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
+]
+
+[[package]]
+name = "uc-micro-py"
+version = "1.0.3"
+requires_python = ">=3.7"
+summary = "Micro subset of unicode data files for linkify-it-py projects."
+groups = ["default"]
+files = [
+    {file = "uc-micro-py-1.0.3.tar.gz", hash = "sha256:d321b92cff673ec58027c04015fcaa8bb1e005478643ff4a500882eaab88c48a"},
+    {file = "uc_micro_py-1.0.3-py3-none-any.whl", hash = "sha256:db1dffff340817673d7b466ec86114a9dc0e9d4d9b5ba229d9d60e5c12600cd5"},
 ]
