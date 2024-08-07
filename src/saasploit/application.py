@@ -11,10 +11,10 @@ from datetime import datetime
 
 
 
-async def application_runner(console: Console, scope: str) -> None:
+async def application_runner(console: Console, project_directory: str) -> None:
 
     
-    console.print(f"Launching Textual TUI dashboard for analysis of scope: {scope} - {datetime.now()}\n\n")
+    console.print(f"Launching Textual TUI dashboard for analysis of scope: {project_directory} - {datetime.now()}\n\n")
     
     console.print(f"Extracting scope from directory provided\n\n")
     console.clear()
