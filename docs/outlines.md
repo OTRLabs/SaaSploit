@@ -71,6 +71,8 @@ Perhaps it would be rendered in more of a dashboard that, instead of filling up 
 This is where the actual thinking and brain power comes in, because we are going to have to actually begin thinking about… well a variety of things. We actually need to research every service we intend to provide testing for. That, at the moment includes only 
 - Firebase
 - Supabase
+- S3 Buckets
+- Auth0
 But I plan to add, not only more Database as a service, backend as a service providers, but other SaaS tooling
 
 We will be focusing primarily on web based SaaS services which operate over HTTP. 
